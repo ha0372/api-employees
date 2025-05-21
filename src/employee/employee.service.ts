@@ -276,4 +276,8 @@ export class EmployeeService {
       throw error;
     }
   }
+  private async pr1()
+  {
+    let test = "Hello wordl"
+  }
 }
