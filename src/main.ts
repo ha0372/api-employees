@@ -17,6 +17,13 @@ async function bootstrap() {
       transform: true,
     }),
   );
+
+  // Habilitar CORS
+  app.enableCors({
+    origin: '*', // Permitir todas las solicitudes de cualquier origen
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Métodos permitidos
+    allowedHeaders: 'Content-Type, Accept, Authorization', // Encabezados permitidos
+  });
   
   // Añadir prefijo global a la API
   app.setGlobalPrefix('api');
